@@ -6,5 +6,4 @@ def say_hello(name=None):
 
 
 if __name__ == "__main__":
-    say_hello(input("What's your name? "))
-
+    say_hello(input("What's your name? "))  # pragma: no cover
