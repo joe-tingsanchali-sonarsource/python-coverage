@@ -8,7 +8,7 @@ class PrintingTest(TestCase):
 
     def test_say_hello(self):
         name = 'test'
-        expected_output = 'hello {}\n'.format(name)
+        expected_output = 'Hello {}\n'.format(name)
 
         with patch('sys.stdout', new=StringIO()) as fake_out:
             say_hello(name)

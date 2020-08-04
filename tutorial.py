@@ -1,6 +1,6 @@
 def say_hello(name=None):
     if name != "":
-        print("hello", name)
+        print("Hello", name)
     else:
         print("Hello Stranger")
 
