@@ -25,3 +25,32 @@ $coverage html
 
 ## Excluding code from coverage
 Add a comment after the line "# pragma: no cover"
+
+
+------
+Install stuff
+```text
+$ pip3 install coverage
+$ pip3 install -U pytest
+```
+
+## Get Test Coverage output
+See https://stackoverflow.com/a/70556981/3412545
+```text
+❯ file="test_tutorial.py" && coverage run $file && coverage report -m $file && coverage xml $file                                                                                                                                                           master ◼
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+test_tutorial.py      17     10    41%   10-15, 18-23
+------------------------------------------------
+TOTAL                 17     10    41%
+Wrote XML report to coverage.xml
+```
+for
+`-Dsonar.python.coverage.reportPaths=coverage.xml`
+
+## Get Test Execution output
+`pytest --junitxml=py-results1.xml`
+for
+`-Dsonar.python.xunit.reportPath=py-results1.xml`
+
+
