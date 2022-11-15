@@ -16,7 +16,7 @@ class PrintingTest(TestCase):
 
     def test_say_hello_noname(self):
 #         name = ''
-        name = 'Hello Stranger\n'
+        name = 'Stranger'
         expected_output = 'Hello Stranger\n'
 
         with patch('sys.stdout', new=StringIO()) as fake_out:
