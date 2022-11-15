@@ -8,7 +8,7 @@ $ pip install coverage
 If you are using anaconda distribution, you can use:
 ```text
 $ conda install coverage
-```text
+```
 
 You can verify your Coverage installation by checking the version:
 ```text
