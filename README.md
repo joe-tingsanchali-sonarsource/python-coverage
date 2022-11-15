@@ -49,7 +49,8 @@ $ pip3 install -U pytest
 ## Get Test Coverage output
 See https://stackoverflow.com/a/70556981/3412545
 ```text
-❯ file="test_tutorial.py" && coverage run $file && coverage report -m $file && coverage xml $file                                                                                                                                                           master ◼
+$ file="test_tutorial.py" && coverage run $file && coverage report -m $file && coverage xml $file
+
 Name               Stmts   Miss  Cover   Missing
 ------------------------------------------------
 test_tutorial.py      17     10    41%   10-15, 18-23
