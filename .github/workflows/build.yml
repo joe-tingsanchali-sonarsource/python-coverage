@@ -33,6 +33,8 @@ jobs:
           coverage report -m $file
           coverage xml $file
           pytest --junitxml=py-results1.xml # get test execution report
+      - name: Override Coverage Source Path for Sonar
+        run: sed -i "s/<source>\/home\/runner\/work\/python-coverage\/python-coverage<\/source>/<source>\/github\/workspace<\/source>/g" /github/workspace/coverage.xml
       - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:
