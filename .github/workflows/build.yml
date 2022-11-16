@@ -33,6 +33,11 @@ jobs:
           coverage report -m $file
           coverage xml $file
           pytest --junitxml=py-results1.xml # get test execution report
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: coverage.xml
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
